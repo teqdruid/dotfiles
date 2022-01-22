@@ -24,7 +24,7 @@
           "leading_diamond": "",
           "trailing_diamond": "\uE0B0",
           "properties": {
-            "template": "{{ .HostName }}"
+            "template": "{{ if .SSHSession }}\uF817{{ end }}{{ if eq .HostName \"jodemme-desk-linux\" }} desk {{ else }} {{ .HostName }} {{ end }}"
           }
         },
         {
@@ -159,5 +159,5 @@
   "final_space": true,
   "console_title": true,
   "console_title_style": "template",
-  "console_title_template": "{{ .Shell }} in {{ .Folder }}"
+  "console_title_template": "{{ .HostName }}/{{ .Folder }}"
 }
