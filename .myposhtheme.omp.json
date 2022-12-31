@@ -15,18 +15,18 @@
           "foreground": "#ffffff",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": " {{ if .SSHSession }}\uf817{{ end }}{{ if eq .HostName \"jodemme-desk-linux\" }} desk {{ else }} {{ .HostName }} {{ end }} ",
+          "template": " {{ if .SSHSession }}\uf817{{ end }}{{ if eq .HostName \"jodemme-desk-linux\" }} desk {{ else if  eq .HostName \"msfpga-ws-shared-linux.corp.microsoft.com\" }} ponies {{ else }} {{ .HostName }} {{ end }} ",
           "trailing_diamond": "\ue0b0",
           "type": "session"
         },
-	{
-	  "type": "python",
-	  "style": "powerline",
-	  "powerline_symbol": "\uE0B0",
-	  "foreground": "#100e23",
-	  "background": "#906cff",
-	  "template": " \uE235 {{ .Venv }} "
-	},
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "template": " \uE235 {{ .Venv }} "
+        },
         {
           "background": "#ff479c",
           "foreground": "#ffffff",
@@ -96,7 +96,7 @@
             "always_enabled": true
           },
           "style": "diamond",
-          "template": " \ue23a ",
+          "template": " {{ if eq .Code 0 }}\ue23a{{ else }}{{.Code}}{{ end }} ",
           "trailing_diamond": "\ue0b4",
           "type": "exit"
         }
