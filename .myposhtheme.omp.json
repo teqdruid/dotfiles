@@ -15,7 +15,7 @@
           "foreground": "#ffffff",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": " {{ if .SSHSession }}\uf817{{ end }}{{ if eq .HostName \"jodemme-desk-linux\" }} desk {{ else if  eq .HostName \"msfpga-ws-shared-linux.corp.microsoft.com\" }} ponies {{ else }} {{ .HostName }} {{ end }} ",
+          "template": "{{ if  eq .HostName \"msfpga-ws-shared-linux.corp.microsoft.com\" }}ponies{{ else }}{{ .HostName }}{{ end }}",
           "trailing_diamond": "\ue0b0",
           "type": "session"
         },
@@ -38,7 +38,7 @@
             "style": "agnoster_short"
           },
           "style": "powerline",
-          "template": " \uf74a  {{ .Path }} ",
+          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
