@@ -98,7 +98,7 @@
           "style": "diamond",
           "template": " {{ if eq .Code 0 }}\ue23a{{ else }}{{.Code}}{{ end }} ",
           "trailing_diamond": "\ue0b4",
-          "type": "exit"
+          "type": "session"
         }
       ],
       "type": "prompt"
@@ -114,7 +114,7 @@
             "always_enabled": true
           },
           "style": "diamond",
-          "template": "\ufbab {{ .FormattedMs }} ",
+          "template": "\ue641 {{ .FormattedMs }} ",
           "type": "executiontime"
         },
         {
