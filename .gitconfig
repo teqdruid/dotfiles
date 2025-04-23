@@ -1,0 +1,19 @@
+[user]
+        name = John Demme
+        email = john.demme@microsoft.com
+[alias]
+        co = checkout
+[credential]
+	azreposCredentialType = oauth
+	msauthFlow = devicecode
+	helper = 
+	helper = /home/jodemme/.dotnet/tools/git-credential-manager
+	credentialStore = cache
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "azrepos:org/mscatapult"]
+	username = jodemme@microsoft.com
+[push]
+	autoSetupRemote = true
+[advice]
+	skippedCherryPicks = false
