@@ -21,7 +21,7 @@
           },
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b0",
-          "template": "{{ if  eq .HostName \"msfpga-ws-shared-linux.corp.microsoft.com\" }}ponies{{ else }}{{ .HostName }}{{ end }}",
+          "template": "{{ if  eq .Env.ESI_COSIM_HOST \"localhost\" }}COSIM{{ else }}{{ .HostName }}{{ end }}",
           "foreground": "#ffffff",
           "background": "#c386f1",
           "type": "session",
